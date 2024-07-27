@@ -1,0 +1,128 @@
+@import "./utils.scss";
+@import "./style.scss";
+@import "./media.scss";
+
+@import "./menu.scss";
+
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.skills-container {
+  gap: 20px 40px;
+
+  .skill {
+    // converted to 1, from gsap animation
+    opacity: 0;
+
+    background: #f3f3f3;
+    padding: 1rem 0;
+    border-radius: 25px;
+    transition: all 600ms ease;
+    
+    div {
+      text-align: center;
+    }
+
+    .icon {
+      transition: all 600ms ease;
+    }
+
+    &:hover,
+    &.hovered {
+      transform: scale(1.08) !important;
+      filter: grayscale(1);
+      background-color: white !important;
+    }
+  }
+}
+
+#projects {
+  &.smooth-wrapper {
+    position: relative;
+    padding: 100px 0 0 0 ;
+    height: auto;
+  }
+
+  #projects-container {
+    position: relative;
+    padding: 0 40px;
+  }
+  
+  .project-wrapper {
+    width: 100%;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 40px;
+    z-index: 1;
+    margin: 5rem 0 15rem 0;
+  }
+}
+
+// -------------------------------------------------------
+
+#about {
+  .more-about-btn {
+    float: inline-end;
+    padding: 0.6rem 0;
+  }
+}
+
+#projects-container .project > .article-container {
+  position: relative;
+  z-index: 10;
+  height: 25rem !important;
+}
+
+.shadow {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 300px;
+  height: 150px;
+  aspect-ratio: 1;
+  background: rgb(68 68 177 / 51%);
+  translate: -50% -50%;
+  border-radius: 50%;
+  z-index: -1;
+  filter: blur(130px);
+
+  &.on-content {
+    z-index: 0;
+    background: rgb(136 156 203);
+    width: 200px;
+    height: 100px;
+    filter: blur(100px);
+  }
+}
+
+#projects-bg-progress {
+  --border-radius: 40px;
+  position: fixed;
+  // height is width, and width is height.
+  // becaue the progress bar is rotated (to make it vertical).
+  height: 0.6rem;
+  width: 15rem;
+  top: 40%;
+  left: -5%;
+  background: rgba(230, 228, 228, 0.671);
+  transform: rotate(90deg);
+  border-radius: var(--border-radius);
+
+  &.hidden {
+    display: none;
+  }
+
+  &::-webkit-progress-bar {
+    background: rgba(230, 228, 228, 0.671);
+    border-radius: var(--border-radius);
+  }
+
+  &::-webkit-progress-value {
+    background-color: rgb(156, 156, 255);
+    border-radius: var(--border-radius);
+  }
+}

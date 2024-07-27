@@ -1,0 +1,102 @@
+#menu .menu-toggle {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 70px;
+  z-index: 100;
+  background-color: #d8efff;
+  border-bottom-left-radius: 50px;
+  padding-top: 20px;
+  cursor: pointer;
+}
+#menu .menu-toggle.open {
+  background-color: white;
+}
+#menu .menu-toggle > * {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+#menu .fullscreen-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.5s ease-in-out;
+}
+#menu .fullscreen-menu.active {
+  pointer-events: auto;
+  animation: openMenu 0.5s ease-in-out forwards;
+}
+#menu .fullscreen-menu:not(.active) {
+  opacity: 0;
+}
+#menu .fullscreen-menu.closing {
+  animation: closeMenu 0.5s ease-in-out forwards;
+}
+#menu .fullscreen-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+#menu .fullscreen-menu ul li {
+  margin: 20px 0;
+}
+#menu .fullscreen-menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 2rem;
+}
+#menu .fullscreen-menu ul li a:hover {
+  transform: scale(1.8);
+  color: #79dfff;
+  font-size: 2.3rem;
+}
+#menu .menu-toggle.open .bar1 {
+  transform: rotate(-45deg) translate(-12px, 6px);
+}
+#menu .menu-toggle.open .bar2 {
+  opacity: 0;
+}
+#menu .menu-toggle.open .bar3 {
+  transform: rotate(45deg) translate(-12px, -6px);
+}
+
+@keyframes openMenu {
+  from {
+    transform: translateY(-100%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes closeMenu {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100%);
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=menu.css.map */
