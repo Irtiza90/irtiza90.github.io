@@ -184,5 +184,3 @@ const initprojectsSectionScroll = () => {
 
 initCursorShadow();
 initMenuToggle();
-initSkillsHoverEffect();
-initprojectsSectionScroll();

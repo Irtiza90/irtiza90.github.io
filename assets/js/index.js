@@ -20,3 +20,6 @@ gsap.utils.toArray(".skills-container").forEach((container) => {
     }
   );
 });
+
+initSkillsHoverEffect();
+initprojectsSectionScroll();
