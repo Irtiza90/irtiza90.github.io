@@ -123,11 +123,17 @@ const initMenuToggle = () => {
   fullscreenMenu.querySelectorAll('.nav-link').forEach((link) => {
     link.addEventListener('click', (ev) => {
       const ref = link.getAttribute('href');    
-      if (!ref.startsWith('#')) return;
 
       ev.preventDefault();
 
-      closeNav(function() {
+      if (!ref.startsWith('#')) {
+        closeNav(() => {
+          window.location.href = ref;
+        });
+        return;
+      }     
+
+      closeNav(() => {
         if (ref === '#') {
           window.scrollTo({ top: 0, behavior: 'smooth' });
         } else {
