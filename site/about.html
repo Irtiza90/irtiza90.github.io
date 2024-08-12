@@ -6,36 +6,238 @@ permalink: /about
 ---
 
 <section id="profile">
-  <div class="section__pic-container">
-    <img src="/assets/img/coding.gif" loading="eager" width="400px" height="400px" alt="Person Coding gif" />
-  </div>
-  <div class="section__text">
-    <p class="section__text__p1">Hello, I'm</p>
-    <h1 class="title">Irtiza</h1>
-    <p class="section__text__p2">FullStack Developer</p>
-    <div class="btn-container">
-      <a href="{{ site.asset_link }}" target="_blank" class="no-style">
-        <button class="btn btn-color-2" type="button">
-          Download CV
-        </button>
-      </a>
-      <a class="no-style" href="#contact">
-        <button class="btn btn-color-1" type="button">
-          Contact Info
-        </button>
-      </a>
+  <div class="row">
+    <div class="col-4 section__pic-container order-1">
+      <img src="/assets/img/coding.gif" loading="eager" width="400px" height="400px" alt="Person Coding gif" />
     </div>
-    <div id="socials-container">
-      <a class="no-style" target="_blank" href="{{ site.linkedin_url }}">
-        <img src="/assets/img/linkedin.png" alt="LinkedIn profile" class="icon" />
-      </a>
-      <a class="no-style" target="_blank" href="{{ site.github_url }}">
-        <img src="/assets/img/github.png" alt="Github profile" class="icon" />
-      </a>
+    <div class="col-8 profile-desc">
+      <h1 class="title">Hello! I'm Irtiza, a Developer based in Pakistan.</h1>
+
+      <p>I love building tools that are simple, efficient and accessible.</p>
+
+      <div class="btn-container mt-4">
+        <a href="{{ site . linkedin_url }}" target="_blank" class="no-style">
+          <button class="btn btn-color-2" type="button">
+            LinkedIn
+          </button>
+        </a>
+        <a class="no-style" href="{{ site . github_url }}">
+          <button class="btn btn-color-1" type="button">
+            Github
+          </button>
+        </a>
+      </div>
+      <!-- <div id="socials-container">
+        <a class="no-style" target="_blank" href="{{ site . linkedin_url }}">
+          <img src="/assets/img/linkedin.png" alt="LinkedIn profile" class="icon" />
+        </a>
+        <a class="no-style" target="_blank" href="{{ site . github_url }}">
+          <img src="/assets/img/github.png" alt="Github profile" class="icon" />
+        </a>
+      </div> -->
     </div>
   </div>
 </section>
 
 <section id="about">
+  <h2 class="section-title">Work History</h2>
+  <div id="work-experience" class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <h3 class="timeline-heading">Full Stack Developer</h3>
+        <h4 class="timeline-subheading font-lora">Digitano LLC</h4>
+        <div class="timeline-body content">
+          <ul>
+            <li>Led a complete Refactoring of a legacy laravel codebase to improve performance, readability, and maintainability.</li>
+            <li>Collaborated with Designers and developers to create high-quality responsive websites.</li>
+            <li>Created Admin Dashboard for managing site.</li>
+            <li>Constantly check for application responsiveness and eliminate bugs. As well as using linters/formatters to keep code manageable.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <h3 class="timeline-heading">Full Stack Developer</h3>
+        <h4 class="timeline-subheading font-lora">JB</h4>
+        <div class="timeline-body content">
+          <ul>
+            <li>Developed and maintained code for in-house web applications.</li>
+            <li>Created designs and layouts for applications and web pages.</li>
+            <li>Debug and fix existing software bugs to improve user experience & performance.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <h3 class="timeline-heading">Frontend Web Developer (Internship)</h3>
+        <h4 class="timeline-subheading font-lora">JB</h4>
+        <div class="timeline-body content">
+          <p>During the internship I gained experience in creating appealing and user-friendly interfaces.</p>
+          <p>My work included converting design ideas into functional web pages using HTML, CSS/SCSS, and JavaScript/JQuery. My focus was in creating visually appealing, responsive websites optimized for UX and cross-browser compatibility to provide
+            a friendly experience for users.</p>
+          <p>I also worked in optimizing website performance by implementing best practices for front-end development, such as image optimization and code minification.</p>
+          <p>Overall, the internship provided me with skills in frontend web design, and a solid understanding of UI/UX principles.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <div id="education" style="margin-top: 10rem; margin-bottom: 10rem;">
+    <h2 class="section-title pb-5">Education & Certifications</h2>
+    
+    <div class="row">
+      <div class="col-5">
+        <ul class="list-style-none">
+          <li class="mb-4">
+            <div class="timeline-content" style="
+              background: transparent;
+              box-shadow: none;
+              padding: 0 10px;
+            ">
+              <span style="display: flex;gap: 10px;align-items: baseline;">
+                <h3 class="timeline-heading">Diploma in Software Engineering,</h3>
+                <h3 class="font-lora timeline-subheading" style="
+              font-size: 1.2rem;
+              margin: 0;
+              ">
+                  Aptech
+                </h3>
+              </span>
+
+
+              <div class="timeline-body content">
+                <p>Present</p>
+
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="timeline-content" style="
+              background: transparent;
+              box-shadow: none;
+              padding: 0 10px;
+            ">
+              <span style="display: flex;gap: 10px;align-items: baseline;">
+                <h3 class="timeline-heading">10th, </h3>
+                <h3 class="font-lora timeline-subheading" style="
+              font-size: 1.2rem;
+              margin: 0;
+              ">The Spirit School</h3>
+              </span>
+
+
+              <div class="timeline-body content">
+                <p>2022</p>
+
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-1">
+        <div style="
+          height: 100%;
+          width: 2px;
+          background: radial-gradient(black, white);
+          margin: auto;
+        "></div>
+      </div>
+
+      <div class="col-5">
+        <ul class="list-style-none">
+          <li>
+            <div class="timeline-content" style="
+              background: transparent;
+              box-shadow: none;
+              padding: 0 10px;
+            ">
+              <span style="display: flex;gap: 10px;align-items: baseline;">
+                <h3 class="timeline-heading">Python Bootcamp, </h3>
+                <h3 class="font-lora timeline-subheading" style="
+                font-size: 1.2rem;
+                margin: 0;
+              ">London AppBrewery</h3>
+              </span>
+
+
+              <div class="timeline-body content">
+                <p>2023</p>
+
+              </div>
+            </div>
+          </li>
+          <hr class="light-hr">
+          <li class="mb-4">
+            <div class="timeline-content" style="
+              background: transparent;
+              box-shadow: none;
+              padding: 0 10px;
+            ">
+              <h3 class="font-lora timeline-subheading" style="
+              font-size: 1.2rem;
+              margin: 0;
+              ">
+                Aptech 2024 DSL Champions
+              </h3>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- TODO: add (github) awards & certifications -->
+  <!-- TODO: add github stats -->
+</section>
+
+<section id="about-me">
+  <h2 class="section-title">About Me</h2>
+
+  <div class="content">
+    <!-- <h3>About Me</h3> -->
+    <p>I'm a passionate software developer with a solid foundation in Full-Stack web development. I'm proficient in multiple languages such as Python, PHP, and JavaScript. I do backend development with Laravel or Flask, where I enjoy creating
+      efficient and scalable systems. On the frontend, I'm proficient in HTML, CSS, SCSS, JavaScript, jQuery, and Tailwind CSS, building visually appealing and user-friendly interfaces.</p>
+
+    <p>I'm always eager to learn and stay up-to-date with the latest technologies. Learning new skills, languages, and frameworks is important in this always evolving field. I believe that challenging myself with new tools and technologies is key to
+      staying ahead and delivering innovative solutions.</p>
+
+    <p>I also have a passion in electronics. I enjoy working with Arduino and other microcontrollers, where I explore how to create innovative and practical solutions. My projects involve integrating hardware and software to solve real-world problems
+      and making technology more accessible and functional.</p>
+
+    <h3>🎮 Hobbies</h3>
+    <p>In addition to my passion in software development, I also have a wide range of hobbies that fuel my creativity. I enjoy games which involves strategic thinking and problem-solving skills. I'm also learning sketching. Reading is another growing
+      passion of mine, especially books for better understanding of the world in areas related to history, culture, and technology.</p>
+
+    <p>I'm also interested in astronomy, history, and geography as they provide valuable insights into our universe and the evolution of civilization. Astronomy is fascinating to me because of the vastness of space and the sheer scale of the
+      universe, compared to the tiny blue planet. History and geography helps in understanding of how societies have developed and interacted with their environments. How their tools and technologies along with cultures have evolved over time, the
+      rise and fall of once might empires. Additionally, i also like learning languages.</p>
+
+    <h3>💼 Seeking Opportunities</h3>
+    <p>I am currently open to internships, part-time roles, and collaborative projects where I can apply my skills and gain practical industry experience. I am particularly excited about working on projects that make a real impact, combining my
+      technical expertise with my passion for innovation and cultural exploration.</p>
+  </div>
+
+</section>
+
+<hr class="light-hr" style="
+  width: 50%;
+  margin: auto;
+  margin-top: 5rem;
+">
+
+<section id="socials-links" class="my-5">
+  <h2 class="section-title">Social Links</h2>
+
+  <div id="socials-container">
+    <a class="no-style" target="_blank" href="{{ site . linkedin_url }}">
+      <img src="/assets/icons/linkedin.svg" alt="LinkedIn profile" class="icon" />
+    </a>
+    <a class="no-style" target="_blank" href="{{ site . github_url }}">
+      <img src="/assets/icons/github.svg" alt="Github profile" class="icon" />
+    </a>
+  </div>
 </section>

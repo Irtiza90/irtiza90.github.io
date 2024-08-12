@@ -1,3 +1,7 @@
+.font-lora {
+  font-family: "Lora", serif;
+}
+
 a.no-style {
   text-decoration: none !important;
   color: inherit !important;
@@ -6,11 +10,42 @@ a.no-style:hover {
   color: inherit !important;
 }
 
+.content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
 .content p {
+  font-size: 0.95rem;
   margin-bottom: 0.5rem;
 }
 .content a {
   text-underline-offset: 0.1rem !important;
+}
+.content ul {
+  list-style: circle;
+  margin: 1rem 0 1rem 1.2rem;
+  font-size: 0.92rem;
+  color: rgb(85, 85, 85);
+}
+.content ul li {
+  margin-bottom: 0.4rem;
+}
+
+ul.li-circle {
+  list-style: circle;
+}
+ul.li-circle li {
+  margin-bottom: 1rem;
+}
+
+ul.list-style-none {
+  list-style-type: none !important;
+}
+
+hr.light-hr {
+  margin: 2rem 0.5rem;
+  border-color: #cdcdcd;
+  border-top: 0;
 }
 
 /* GENERAL */

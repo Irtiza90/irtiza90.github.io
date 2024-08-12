@@ -1,0 +1,130 @@
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+#profile {
+  display: block !important;
+
+  h1.title {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+
+  .profile-desc {
+    align-self: center;
+  }
+}
+
+.timeline {
+  --border-color: #f4f3f5d9;
+
+  // display: flex;
+  // flex-direction: column;
+  position: relative;
+  margin: 20px 0;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 28px;
+  top: 5px;
+  bottom: 0;
+  width: 4px;
+  // background: linear-gradient(45deg, #d1bebe, rgba(74, 74, 74, 0.5019607843), #d7d7d7);
+  background: var(--border-color);
+  padding: 2px;
+}
+
+.timeline::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 2.5%;
+  bottom: 0;
+  width: 90px;
+  height: 50px;
+  background: transparent !important;
+  border: 8px solid var(--border-color);
+  border-top: 0;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.timeline-item {
+  // display: flex;
+  // align-items: flex-start;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 4px solid #007bffa6;
+}
+
+.timeline-item .timeline-content {
+  margin-left: 60px;
+  background: #ffffff;
+  padding: 2rem 2rem 1.5rem;
+  border-radius: 20px;
+  box-shadow: 4px 3px 9px rgb(217 217 217 / 92%);
+  transition: 1.3s ease;
+}
+
+.timeline-item .timeline-content:hover {
+  transform: scale(1.01);
+  box-shadow: 3px 4px 12px rgb(102 102 102 / 92%);
+}
+
+.timeline-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.timeline-subheading {
+  color: #666;
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: italic;
+  margin: 5px 0 10px;
+}
+
+#about-me {
+  background: white;
+  box-shadow: 1px 1px 48px #5246463d;
+  padding: 3rem 2rem 2rem;
+  border-radius: 20px;
+
+  .section-title {
+    margin-bottom: 1rem;
+  }
+
+  .content {
+    h3 {
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-bottom: 1em;
+    }
+  }
+}
