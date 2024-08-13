@@ -460,6 +460,7 @@ footer p {
   }
   #hamburger-nav {
     display: flex;
+    margin-left: 3rem;
   }
   #experience,
   .experience-details-container {
@@ -480,12 +481,41 @@ footer p {
     margin: 0 5%;
   }
   .section__pic-container {
-    width: 275px;
-    height: 275px;
     margin: 0 auto 2rem;
   }
   .about-containers {
     margin-top: 0;
+  }
+  #profile {
+    min-height: 150%;
+  }
+  #profile .btn-container {
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  #about .more-about-btn {
+    float: none !important;
+  }
+  #experience .exp-bg-image {
+    display: none;
+  }
+  #projects #projects-bg-progress {
+    display: none;
+  }
+}
+@media screen and (max-width: 1024px) {
+  #skills-container .skills-container {
+    gap: 20px 20px;
+  }
+}
+@media screen and (max-width: 992px) {
+  #projects-container .project {
+    height: 30rem !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  #projects-container .project {
+    height: 40rem !important;
   }
 }
 @media screen and (max-width: 600px) {
@@ -505,9 +535,6 @@ footer p {
   .btn-container {
     flex-wrap: wrap;
   }
-  .contact-info-container {
-    margin: 0;
-  }
   .contact-info-container p,
   .nav-links li a {
     font-size: 1rem;
@@ -525,7 +552,6 @@ footer p {
   }
   .section__pic-container {
     width: auto;
-    height: 46vw;
     justify-content: center;
   }
   .section__text__p2 {
@@ -536,6 +562,23 @@ footer p {
   }
   .text-container {
     text-align: justify;
+  }
+  #projects-container .project {
+    height: 100svh !important;
+  }
+  #projects-container .project .project-title {
+    font-size: 2rem;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 576px) {
+  #skills-container .skills-container {
+    gap: 20px 10px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  #projects-container .project .project-title {
+    font-size: 3rem;
   }
 }
 #menu .menu-toggle {
@@ -642,6 +685,7 @@ body, html {
   margin: 0;
   padding: 0;
   height: 100%;
+  max-width: 100%;
 }
 
 .skills-container {
@@ -673,7 +717,8 @@ body, html {
 }
 #projects #projects-container {
   position: relative;
-  padding: 0 40px;
+  padding: 0;
+  max-width: 95%;
 }
 #projects .project-wrapper {
   width: 100%;
@@ -689,10 +734,13 @@ body, html {
   padding: 0.6rem 0;
 }
 
+#projects-container .project {
+  height: 25rem;
+}
 #projects-container .project > .article-container {
   position: relative;
   z-index: 10;
-  height: 25rem !important;
+  height: auto !important;
 }
 
 .shadow {

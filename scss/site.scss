@@ -9,6 +9,7 @@ body, html {
   margin: 0;
   padding: 0;
   height: 100%;
+  max-width: 100%;
 }
 
 .skills-container {
@@ -49,7 +50,8 @@ body, html {
 
   #projects-container {
     position: relative;
-    padding: 0 40px;
+    padding: 0;
+    max-width: 95%;
   }
   
   .project-wrapper {
@@ -71,12 +73,19 @@ body, html {
   }
 }
 
-#projects-container .project > .article-container {
-  position: relative;
-  z-index: 10;
-  height: 25rem !important;
-}
+#projects-container {
+  .project 
+  {
+    height: 25rem;
 
+    > .article-container {
+      position: relative;
+      z-index: 10;
+      height: auto !important;
+    }
+  }
+}
+  
 .shadow {
   position: fixed;
   left: 50%;
