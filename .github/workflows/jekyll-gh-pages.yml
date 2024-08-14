@@ -35,13 +35,13 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16'  # Specify the Node.js version you need
+          node-version: '16'
 
       - name: Install Sass
         run: npm install sass  # Install Sass locally
 
       - name: Compile Sass
-        run: npx sass scss:assets/css --minify  # Adjust paths as necessary
+        run: npx --style=compressed sass scss:assets/css
 
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
