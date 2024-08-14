@@ -158,3 +158,22 @@
     }
   }
 }
+
+#profile {
+  .section__pic-container {
+    img {
+      float: inline-end;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 992px) {
+  #profile {
+    .section__pic-container {
+      img {
+        width: 300px;
+        height: 300px;
+      }
+    }
+  }
+}
