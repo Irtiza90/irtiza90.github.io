@@ -176,6 +176,14 @@
 
 // -------------------- min
 
+@media screen and (min-width: 992px) {
+  #projects-container {
+    .project-wrapper:nth-child(even) .project-img-container {
+      order: 1 !important;
+    }
+  }
+}
+
 @media screen and  (min-width: 1200px) {
   #projects-container {
     max-width: 90% !important;

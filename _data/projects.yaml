@@ -1,0 +1,47 @@
+- title: TooFiftyToo
+  name: toofiftytoo
+  description: >-
+    <p><strong>TooFiftyToo</strong> is a modernistic blogging site built using Laravel, HTML, SCSS, and JavaScript/jQuery. The design features a fresh and unique aesthetic, and a visually appealing layout. The color pallete was carefully chosen based on multiple iterations of the site.</p>
+    <p>The site covers a variety of topics, with organized sections and easy navigation, and provides readers with a smooth browsing experience.</p>
+  cover_img: /assets/img/projects/TFT.jpeg
+  # images:
+  github_link:
+  view_link: https://toofiftytoo.com
+  view_button_text: Live Site
+
+
+
+- title: The StyleVersa
+  name: thestyleversa
+  description: >-
+    <p><strong>TheStyleVersa</strong> is a contemporary blogging site designed to inspire readers with its elegant and user-friendly interface. This platform offers a user-friendly browsing experience. The site's aesthetic is highlighted by its clean and modern design, and a vibrant color palette.</p>
+    <p>TheStyleVersa covers a diverse range of topics such as beauty, fashion, lifestyle, travel, and technology. The articles are presented in a visually appealing manner, making sure that content is not only engaging but also accessible.</p>
+
+  cover_img: /assets/img/projects/TSV.jpeg
+  github_link:
+  view_link: https://thestyleversa.com
+  view_button_text: Live Site
+
+
+
+- title: The LuxeBlog
+  name: theluxeblog
+  description: >-
+    <p>TheLuxeBlog is a comprehensive blogging site that caters to readers interested in beauty, fashion, lifestyle, and shopping advice. The site's design is classic and elegant, offers an easy-to-navigate layout that enhances the user experience.</p>
+    <p>The site ensures tries to balance aesthetic, functionality and performance. TheLuxeBlog provides a pleasant reading experience with a combination of quality content and an inviting layout.</p>
+  cover_img: /assets/img/projects/TLB.jpeg
+  github_link:
+  view_link: https://theluxeblog.com
+  view_button_text: Live Site
+
+
+
+- title: Self Driving Car
+  name: self-driving-car
+  description:
+    <p>The Arduino-powered self driving car is a project that was designed to work as a miniature version of self-driving vehicles that are capable of navigating the environment without human intervention.</p>
+    <p>The vehicle is equipped with an Arduino along with ultrasonic sensors mounted on a servo assembly. It works by scanning the enviornment and taking snapshots to create a map of the surrounding enviornment. The arduino then processes the sensor data and calculates the best direction that is available to move in.</p>
+  cover_img: /assets/img/projects/self-driving-car.jpg
+  github_link:
+  view_link: 
+  view_button_text: 
