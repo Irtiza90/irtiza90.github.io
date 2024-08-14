@@ -45,7 +45,7 @@
   display: block;
   position: absolute;
   top: 100%;
-  left: 2.5%;
+  left: 28px;
   bottom: 0;
   width: 90px;
   height: 50px;
@@ -113,6 +113,7 @@
   box-shadow: 1px 1px 48px #5246463d;
   padding: 3rem 2rem 2rem;
   border-radius: 20px;
+  margin-bottom: 10rem;
 
   .section-title {
     margin-bottom: 1rem;
@@ -125,6 +126,35 @@
 
     p {
       margin-bottom: 1em;
+    }
+  }
+}
+
+#education {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+
+  .timeline {
+    &::before, &::after {
+      content: none !important;
+      display: none !important;
+    }
+
+    .timeline-content {
+      background: transparent;
+      box-shadow: none;
+      padding: 0 10px;
+
+      .timeline-heading-row {
+        display: flex;
+        gap: 10px;
+        align-items: baseline;
+      }
+    }
+
+    .timeline-subheading {
+      margin: 0;
+      font-size: 1.2rem;
     }
   }
 }
