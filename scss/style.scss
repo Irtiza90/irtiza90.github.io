@@ -392,6 +392,10 @@ article {
 .project-btn {
   color: black;
   border-color: rgb(163, 163, 163);
+
+  &:hover {
+    border: 0 !important;
+  }
 }
 
 /* CONTACT */
