@@ -12,8 +12,12 @@ a.no-style {
 }
 
 .img-fluid {
-  max-width: 100%;
-  height: auto;
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+.bd-0 {
+  border: 0 !important;
 }
 
 .content {
