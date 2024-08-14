@@ -93,127 +93,42 @@ permalink: /
 
           <h2 class="experience-sub-title mt-4">Frontend</h2>
           <div class="skills-container d-flex flex-wrap">
-            <div class="skill py-4">
-              <div>
-                <p><img class="icon" src="/assets/icons/html.svg"></img></p>
-                <h3>HTML</h3>
+            {% for skill in site.data.skills.frontend %}
+              <div class="skill py-4">
+                <div>
+                  <p><img class="icon" src="{{ skill.icon }}"></img></p>
+                  <h3>{{ skill.name }}</h3>
+                </div>
               </div>
-            </div>
-            <div class="skill py-4">
-              <div>
-                <p><img class="icon" src="/assets/icons/css.svg"></img></p>
-                <h3>CSS</h3>
-              </div>
-            </div>
-            <div class="skill py-4">
-              <div>
-                <p><img class="icon" src="/assets/icons/sass.svg"></img></p>
-                <h3>SASS</h3>
-              </div>
-            </div>
-            <div class="skill py-4">
-              <div>
-                <p><img class="icon" src="/assets/icons/js.svg"></img></p>
-                <h3>JavaScript</h3>
-              </div>
-            </div>
-            <div class="skill py-4">
-              <div>
-                <p><img class="icon" src="/assets/icons/jquery.svg"></img></p>
-                <h3>jQuery</h3>
-              </div>
-            </div>
-            <div class="skill py-4">
-              <div>
-                <p><img class="icon" src="/assets/icons/bootstrap.svg"></img></p>
-                <h3>Bootstrap</h3>
-              </div>
-            </div>
-            <div class="skill py-4">
-              <div>
-                <p><img class="icon" src="/assets/icons/tailwindcss.svg"></img></p>
-                <h3>TailwindCSS</h3>
-              </div>
-            </div>
-            <div class="skill py-4">
-              <div>
-                <p><img class="icon" src="/assets/icons/react.svg"></img></p>
-                <h3>React</h3>
-              </div>
-            </div>
+            {% endfor %}
           </div>
 
           <!--------------------------------------------------->
 
           <h2 class="experience-sub-title mt-4">Backend</h2>
           <div class="skills-container d-flex flex-wrap">
-            <div class="skill py-4">
-              <div>
-                <p><img class="icon" src="/assets/icons/nodejs.svg"></img></p>
-                <h3>Node.js</h3>
+            {% for skill in site.data.skills.backend %}
+              <div class="skill py-4">
+                <div>
+                  <p><img class="icon" src="{{ skill.icon }}"></img></p>
+                  <h3>{{ skill.name }}</h3>
+                </div>
               </div>
-            </div>
-            <div class="skill py-4">
-              <div>
-                <p><img class="icon" src="/assets/icons/php.svg"></img></p>
-                <h3>PHP</h3>
-              </div>
-            </div>
-            <div class="skill py-4">
-              <div>
-                <p><img class="icon" src="/assets/icons/laravel.svg"></img></p>
-                <h3>Laravel</h3>
-              </div>
-            </div>
-            <div class="skill py-4">
-              <div>
-                <p><img class="icon" src="/assets/icons/mysql.svg"></img></p>
-                <h3>MySQL</h3>
-              </div>
-            </div>
-
-            <div class="skill py-4">
-              <div>
-                <p><img class="icon" src="/assets/icons/python.svg"></img></p>
-                <h3>Python</h3>
-              </div>
-            </div>
+            {% endfor %}
           </div>
           
           <!------------------------------->
 
           <h2 class="experience-sub-title mt-4">Extras</h2>
           <div class="skills-container d-flex flex-wrap">
-            <div class="skill py-4">
-              <div>
-                <p><img class="icon" src="/assets/icons/arduino.svg"></img></p>
-                <h3>Arduino</h3>
+            {% for skill in site.data.skills.extras %}
+              <div class="skill py-4">
+                <div>
+                  <p><img class="icon" src="{{ skill.icon }}"></img></p>
+                  <h3>{{ skill.name }}</h3>
+                </div>
               </div>
-            </div>
-            <div class="skill py-4">
-              <div>
-                <p><img class="icon" src="/assets/icons/git.svg"></img></p>
-                <h3>Git</h3>
-              </div>
-            </div>
-            <div class="skill py-4">
-              <div>
-                <p><img class="icon" src="/assets/icons/github.svg"></img></p>
-                <h3>Github</h3>
-              </div>
-            </div>
-            <div class="skill py-4">
-              <div>
-                <p><img class="icon" src="/assets/icons/bash.svg"></img></p>
-                <h3>Bash</h3>
-              </div>
-            </div>
-            <div class="skill py-4">
-              <div>
-                <p><img class="icon" src="/assets/icons/postman.svg"></img></p>
-                <h3>Postman</h3>
-              </div>
-            </div>
+            {% endfor %}
           </div>
         </div>
 

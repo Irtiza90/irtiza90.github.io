@@ -1,0 +1,41 @@
+frontend:
+  - name: HTML
+    icon: /assets/icons/html.svg
+  - name: CSS
+    icon: /assets/icons/css.svg
+  - name: SASS
+    icon: /assets/icons/sass.svg
+  - name: JavaScript
+    icon: /assets/icons/js.svg
+  - name: jQuery
+    icon: /assets/icons/jquery.svg
+  - name: Bootstrap
+    icon: /assets/icons/bootstrap.svg
+  - name: TailwindCSS
+    icon: /assets/icons/tailwindcss.svg
+  - name: React
+    icon: /assets/icons/react.svg
+
+backend:
+  - name: Node.js
+    icon: /assets/icons/nodejs.svg
+  - name: PHP
+    icon: /assets/icons/php.svg
+  - name: Laravel
+    icon: /assets/icons/laravel.svg
+  - name: MySQL
+    icon: /assets/icons/mysql.svg
+  - name: Python
+    icon: /assets/icons/python.svg
+
+extras:
+  - name: Arduino
+    icon: /assets/icons/arduino.svg
+  - name: Git
+    icon: /assets/icons/git.svg
+  - name: Github
+    icon: /assets/icons/github.svg
+  - name: Bash
+    icon: /assets/icons/bash.svg
+  - name: Postman
+    icon: /assets/icons/postman.svg
