@@ -84,7 +84,7 @@
 
 @media screen and (max-width: 992px) {
   #projects-container .project {
-    height: 30rem !important;
+    height: 33rem !important;
   }
 }
 
@@ -159,10 +159,31 @@
 }
 
 @media screen and (max-width: 576px) {
+  .section__pic-container {
+    height: auto;
+
+    > img {
+      width: auto;
+      max-width: 100%;
+      height: auto;
+      border-radius: 30%;
+    }
+  }
+
   #skills-container .skills-container {
     gap: 20px 10px;
   }
 }
+
+// -------------------- min
+
+@media screen and  (min-width: 1200px) {
+  #projects-container {
+    max-width: 90% !important;
+  }
+}
+
+// -------------------- min-max
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
   #projects-container .project {

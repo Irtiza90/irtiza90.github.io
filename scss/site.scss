@@ -5,6 +5,11 @@
 @import "./menu.scss";
 
 
+:root {
+  // set from js
+  --projects-el-height: auto;
+}
+
 body, html {
   margin: 0;
   padding: 0;
@@ -42,6 +47,11 @@ body, html {
 }
 
 #projects {
+  .project {
+    height: auto !important;
+    height: var(--projects-el-height) !important;
+  }
+
   &.smooth-wrapper {
     position: relative;
     padding: 100px 0 0 0 ;
@@ -56,6 +66,8 @@ body, html {
   
   .project-wrapper {
     width: 100%;
+    height: auto;
+
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 40px;
@@ -110,16 +122,16 @@ body, html {
 
 #projects-bg-progress {
   --border-radius: 40px;
+
   position: fixed;
-  // height is width, and width is height.
-  // becaue the progress bar is rotated (to make it vertical).
-  height: 0.6rem;
   width: 15rem;
-  top: 40%;
-  left: -5%;
+  height: 0.6rem;
+  top: 50%;         /* position at center */
+  left: 20px;       /* margin-lef */
   background: rgba(230, 228, 228, 0.671);
-  transform: rotate(90deg);
   border-radius: var(--border-radius);
+  transform: rotate(90deg) translateX(-50%); /* Rotates and centers the bar */
+  transform-origin: left center;             /* Sets the rotation origin */
 
   &.hidden {
     display: none;
