@@ -1,0 +1,42 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="{{ site.meta.description }}">
+<meta name="robots" content="index, follow">
+<meta name="author" content="{{ site.meta.author }}">
+<meta name="keywords" content="{{ site.meta.keywords }}">
+
+<link rel="canonical" href="{{ site.url }}">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+<!-- Open Graph Meta -->
+<meta property="og:title" content="{{ site.meta.title }}">
+<meta property="og:description" content="{{ site.meta.description }}">
+<meta property="og:url" content="{{ site.url }}">
+<meta property="og:type" content="website">
+<meta property="og:image" content="{{ site.url }}/favicon.ico">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ site.meta.title }}">
+<meta name="twitter:description" content="{{ site.meta.description }}">
+<meta name="twitter:image" content="{{ site.url }}/favicon.ico">
+
+<!-- Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "{{ site.meta.author }}",
+  "url": "{{ site.url }}",
+  "sameAs": [
+    "{{ site.linkedin_url }}",
+    "{{ site.github_url }}"
+  ],
+  "jobTitle": "FullStack Developer",
+  "gender": "Male",
+  "birthDate": "2005-07-21",
+}
+</script>
+
+<title>{{ site.title }} - Portfolio | Software Developer</title>

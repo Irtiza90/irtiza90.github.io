@@ -41,7 +41,7 @@ function initProjectsSection() {
 
     document.documentElement.style.setProperty('--projects-el-height', `${maxHeight}px`);
 
-    console.debug('--projects-el-height:', getComputedStyle(document.documentElement).getPropertyValue('--projects-el-height'));
+    // console.debug('--projects-el-height:', getComputedStyle(document.documentElement).getPropertyValue('--projects-el-height'));
   }
 
   // set heights on load and resize

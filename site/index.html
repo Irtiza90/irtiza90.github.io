@@ -96,7 +96,7 @@ permalink: /
             {% for skill in site.data.skills.frontend %}
               <div class="skill py-4">
                 <div>
-                  <p><img class="icon" src="{{ skill.icon }}"></img></p>
+                  <p><img class="icon" src="{{ skill.icon }}" alt="{{ skill.name }}"></img></p>
                   <h3>{{ skill.name }}</h3>
                 </div>
               </div>
@@ -110,7 +110,7 @@ permalink: /
             {% for skill in site.data.skills.backend %}
               <div class="skill py-4">
                 <div>
-                  <p><img class="icon" src="{{ skill.icon }}"></img></p>
+                  <p><img class="icon" src="{{ skill.icon }}" alt="{{ skill.name }}"></img></p>
                   <h3>{{ skill.name }}</h3>
                 </div>
               </div>
@@ -124,7 +124,7 @@ permalink: /
             {% for skill in site.data.skills.extras %}
               <div class="skill py-4">
                 <div>
-                  <p><img class="icon" src="{{ skill.icon }}"></img></p>
+                  <p><img class="icon" src="{{ skill.icon }}" alt="{{ skill.name }}"></img></p>
                   <h3>{{ skill.name }}</h3>
                 </div>
               </div>
@@ -155,7 +155,7 @@ permalink: /
           <div class="project details-container color-container">
             <div class="article-container row">
               <div class="project-img-container col-12 col-md-6 col-lg-4">
-                <img src="{{ project.cover_img }}" alt="TooFiftyToo" class="project-img img-fluid" />
+                <img src="{{ project.cover_img }}" alt="{{ project.title }}" class="project-img img-fluid" />
               </div>
               <div class="col-sm-12 col-md-6 col-lg-8">
                 <h2 class="experience-sub-title project-title">{{ project.title }}</h2>
@@ -166,7 +166,7 @@ permalink: /
                   </div>
     
                   <div class="btn-container mt-4">
-                    <!-- <button class="btn btn-color-2 project-btn" onclick="alert('#TODO: show image gallery')">
+                    <!-- <button class="btn btn-color-2 project-btn" onclick="alert('TODO: show image gallery')">
                       More
                     </button> -->
                     
@@ -186,7 +186,7 @@ permalink: /
                 </div>
 
                 <div class="btn-container mt-4">
-                  <!-- <button class="btn btn-color-2 project-btn" onclick="alert('#TODO: show image gallery')">
+                  <!-- <button class="btn btn-color-2 project-btn" onclick="alert('TODO: show image gallery')">
                     More
                   </button> -->
                   

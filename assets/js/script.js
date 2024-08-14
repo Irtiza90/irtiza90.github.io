@@ -143,7 +143,6 @@ const initMenuToggle = () => {
     });
   });
 
-  // TODO: keep this??
   // Show hide the menu button, based on scroll pos: up or down
   // hide on scroll down, show on scroll up
   let lastScrollTop = 0;
@@ -206,8 +205,8 @@ const initprojectsSectionScroll = () => {
       progressEl.classList.add('hidden');
     }
 
-    console.debug('Scrolled Through px:', scrolledpx);
-    console.debug('Scrolled Through %:', scrollPercentage);
+    // console.debug('Scrolled Through px:', scrolledpx);
+    // console.debug('Scrolled Through %:', scrollPercentage);
   }, { passive: true });  
 }
 

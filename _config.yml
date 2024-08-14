@@ -28,7 +28,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://irtiza90.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: Irtiza90
 
 resume_link: /assets/CV-Irtiza Babar.pdf
@@ -36,6 +36,12 @@ linkedin_url: https://www.linkedin.com/in/irtiza-babar-a3428b22a
 github_url: https://github.com/Irtiza90
 
 formspree_url: https://formspree.io/f/xvgpqpbv
+
+meta:
+  author: Irtiza Babar
+  title: Irtiza Babar - Portfolio | FullStack Developer
+  description: Irtiza Babar's portfolio showcasing my projects and skills. Explore my work and get in touch for collaborations.
+  keywords: Web Developer, Portfolio, Irtiza Babar, Front-End Developer, Web Designer, Back-End Developer, Full-Stack Developer
 
 # Exclude from processing.
 # The following items will not be processed, by default.
