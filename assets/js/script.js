@@ -142,6 +142,35 @@ const initMenuToggle = () => {
       });
     });
   });
+
+  // TODO: keep this??
+  // Show hide the menu button, based on scroll pos: up or down
+  // hide on scroll down, show on scroll up
+  let lastScrollTop = 0;
+  let navbar = document.querySelector('#menu .menu-toggle');
+  let timeoutId;
+
+  window.addEventListener('scroll', function() {
+    let scrollTop = document.documentElement.scrollTop;
+
+    clearTimeout(timeoutId);
+
+    if (scrollTop > lastScrollTop) {
+      // scrolling down: hide the nav
+      navbar.style.display = 'none';
+      
+      // Hide navbar after delay
+      timeoutId = setTimeout(() => {
+        navbar.style.display = 'none';
+      }, 200);
+
+    } else {
+      // scrolling up: Show nav
+      navbar.style.display = 'flex';
+    }
+
+    lastScrollTop = scrollTop;
+  });
 }
 
 const initprojectsSectionScroll = () => {
