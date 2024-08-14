@@ -21,5 +21,36 @@ gsap.utils.toArray(".skills-container").forEach((container) => {
   );
 });
 
+function initProjectsSection() {
+  function setEqualHeight(elements) {
+    let maxHeight = 0;
+
+    // reset heights to auto to recalculate max height
+    elements.forEach(el => {
+      el.style.height = 'auto !important';
+      document.documentElement.style.setProperty('--projects-el-height', 'auto');
+    });
+
+    // get the el with largest height
+    elements.forEach(el => {
+      const elHeight = el.offsetHeight;
+      if (elHeight > maxHeight) {
+        maxHeight = elHeight;
+      }
+    });
+
+    document.documentElement.style.setProperty('--projects-el-height', `${maxHeight}px`);
+
+    console.debug('--projects-el-height:', getComputedStyle(document.documentElement).getPropertyValue('--projects-el-height'));
+  }
+
+  // set heights on load and resize
+  const projectEls = document.querySelectorAll('#projects .project');
+
+  window.addEventListener('resize', () => setEqualHeight(projectEls));
+  window.addEventListener('load',   () => setEqualHeight(projectEls));
+}
+
 initSkillsHoverEffect();
+initProjectsSection();
 initprojectsSectionScroll();
