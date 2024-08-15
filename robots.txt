@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://irtiza90.github.io/sitemap.xml
