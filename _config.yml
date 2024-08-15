@@ -31,7 +31,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://irtiza90.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: Irtiza90
 
-resume_link: /assets/CV-Irtiza Babar.pdf
+resume_link: /CV-Irtiza Babar.pdf
 linkedin_url: https://www.linkedin.com/in/irtiza-babar-a3428b22a
 github_url: https://github.com/Irtiza90
 
