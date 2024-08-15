@@ -39,8 +39,9 @@ formspree_url: https://formspree.io/f/xvgpqpbv
 
 meta:
   author: Irtiza Babar
+  job_title: Full-Stack Developer
   title: Irtiza Babar - Portfolio | FullStack Developer
-  description: Irtiza Babar's portfolio showcasing my projects and skills. Explore my work and get in touch for collaborations.
+  description: My portfolio site showcasing my projects and skills. Explore my work and get in touch for collaborations.
   keywords: Web Developer, Portfolio, Irtiza Babar, Front-End Developer, Web Designer, Back-End Developer, Full-Stack Developer
 
 # Exclude from processing.
