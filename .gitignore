@@ -7,3 +7,6 @@ _site
 .temp
 vendor
 .vscode
+
+# css build files
+assets/css
