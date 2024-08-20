@@ -35,6 +35,17 @@
   view_button_text: Live Site
 
 
+- title: ReChat
+  name: rechat
+  description:
+    <p>ReChat is a prototype chat app built with React and Laravel/PHP. It allows for messaging with a responsive interface, supporting multiple client updates, and chat history.</p>
+    <p>It was built to gain experience in managing sockets, state management in React, and handling server-client communication.</p>
+  cover_img: /assets/img/projects/re-chat.jpg
+  github_link: https://github.com/Irtiza90/ReChat
+  view_link: https://github.com/Irtiza90/ReChat
+  view_button_text: Github
+
+
 
 - title: Self Driving Car
   name: self-driving-car
