@@ -2,14 +2,14 @@ import aboutImg from '../assets/images/about-pic.jpg';
 
 // Site metadata
 export const SITE = {
-  title: 'Irtiza Babar',
+  title: 'Irtiza Babar - Portfolio | Full-Stack Developer',
   description: 'Full-Stack Developer Portfolio',
   url: 'https://irtiza90.github.io',
   author: 'Irtiza Babar',
   email: 'irtizababar90@gmail.com',
   github: 'https://github.com/irtiza90',
   githubRepo: 'https://github.com/irtiza90/irtiza90.github.io',
-  linkedin: 'https://www.linkedin.com/in/irtizababar90',
+  linkedin: 'https://www.linkedin.com/in/irtiza-babar',
   cv: '/CV-Irtiza Babar.pdf',
   image: aboutImg.src,
   defaultDescription: 'Full-Stack Developer with expertise in modern web technologies',

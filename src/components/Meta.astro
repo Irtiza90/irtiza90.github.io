@@ -12,13 +12,15 @@ const meta = {
   jobTitle: 'Full-Stack Developer',
   keywords: SITE.keywords,
   image: SITE.image || '/assets/img/about-pic.jpg',
-  resume: '/CV-Irtiza Babar.pdf'
+  resume: SITE.cv,
 };
 ---
 
 <!-- Primary Meta Tags -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{title}</title>
+<meta name="title" content={title}>
 <meta name="description" content={description}>
 <meta name="robots" content="index, follow">
 <meta name="author" content={meta.author}>
@@ -43,26 +45,27 @@ const meta = {
 <meta property="twitter:image" content={`${meta.url}${meta.image}`}>
 
 <!-- Schema.org -->
-<script is:inline set:html={JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": SITE.author,
-  "url": SITE.url,
-  "sameAs": [
-    SITE.linkedin,
-    SITE.github,
-  ].filter(Boolean),
-  "jobTitle": meta.jobTitle,
-  "worksFor": {
-    "@type": "Organization",
-    "name": "Freelance"
-  },
-  "description": description,
-  "image": `${meta.url}${meta.image}`
-})}></script>
+<script
+  type="application/ld+json"
+  is:inline
+  set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: SITE.author,
+    url: SITE.url,
+    sameAs: [SITE.linkedin, SITE.github].filter(Boolean),
+    jobTitle: meta.jobTitle,
+    worksFor: {
+      "@type": "Organization",
+      name: "Freelance"
+    },
+    description,
+    image: `${meta.url}${meta.image}`
+  }, null, 2)}
+></script>
 
 <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XSSR49FYJ1"></script>
+<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-XSSR49FYJ1"></script>
 <script>
   interface Window {
     dataLayer: any[];

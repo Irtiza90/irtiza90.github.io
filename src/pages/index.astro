@@ -37,18 +37,18 @@ const description = SITE.description;
       <h1 class="title">Irtiza</h1>
       <p class="section__text__p2">FullStack Developer</p>
       <div class="btn-container">
-        <a href={SITE.cv} target="_blank" class="no-style">
+        <a href={SITE.cv} target="_blank" class="no-style" aria-label="Download CV">
           <button class="btn btn-color-2" type="button">Download CV</button>
         </a>
-        <a class="no-style" href="#contact">
+        <a class="no-style" href="#contact" aria-label="Contact Me">
           <button class="btn btn-color-1" type="button">Contact Info</button>
         </a>
       </div>
       <div id="socials-container">
-        <a class="no-style" target="_blank" href={SITE.linkedin}>
+        <a class="no-style" target="_blank" href={SITE.linkedin} aria-label="LinkedIn Profile">
           <img src="/assets/icons/linkedin.svg" alt="LinkedIn profile" class="icon" />
         </a>
-        <a class="no-style" target="_blank" href={SITE.github}>
+        <a class="no-style" target="_blank" href={SITE.github} aria-label="Github Profile">
           <img src="/assets/icons/github.svg" alt="Github profile" class="icon" />
         </a>
       </div>
@@ -57,7 +57,7 @@ const description = SITE.description;
 
   <section id="about">
     <p class="section__text__p1">Get To Know More</p>
-    <h1 class="title">About Me</h1>
+    <h2 class="title">About Me</h2>
     <div class="section-container">
       <div class="section__pic-container">
         <Image src={aboutImg} alt="About Me" class="about-pic" loading="lazy" decoding="async" />
@@ -84,8 +84,8 @@ const description = SITE.description;
       </div>
     </div>
 
-    <a href="#experience" class="no-style">
-      <img src="/assets/icons/down-arrow.svg" alt="Arrow icon" class="icon arrow" loading="lazy" style="height: 3rem;" />
+    <a href="#experience" class="no-style" aria-label="Scroll to Skills">
+      <img src="/assets/icons/down-arrow.svg" alt="Arrow icon" class="Scroll to Skills" loading="lazy" style="height: 3rem;" />
     </a>
   </section>
 
@@ -94,7 +94,7 @@ const description = SITE.description;
 
     <div class="container">
       <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Skills</h1>
+      <h2 class="title">Skills</h2>
       <div id="skills-container" class="experience-details-container">
         <div class="about-containers">
           <div class="container">
@@ -136,8 +136,8 @@ const description = SITE.description;
           </div>
         </div>
 
-        <a href="#projects" class="no-style">
-          <img src="/assets/icons/down-arrow.svg" alt="Arrow icon" class="icon arrow" loading="lazy" decoding="async" />
+        <a href="#projects" class="no-style" aria-label="Scroll to Projects">
+          <img src="/assets/icons/down-arrow.svg" alt="Scroll to Projects" class="icon arrow" loading="lazy" decoding="async" />
         </a>
       </div>
     </div>
@@ -196,6 +196,7 @@ const description = SITE.description;
 
       <a
         href="https://github.com/Irtiza90?tab=repositories"
+        aria-label="View More Projects"
         target="_blank"
         rel="noopener nofollow"
         class="btn btn-color-1 mx-auto view-more-proj-btn"
@@ -212,11 +213,11 @@ const description = SITE.description;
     <div class="contact-info-upper-container">
       <div class="contact-info-container">
         <img src="/assets/icons/email.svg" alt="Email icon" class="icon contact-icon email-icon" height="40" width="40" loading="lazy" />
-        <p><a href="mailto:irtizababar90@gmail.com">irtizababar90@gmail.com</a></p>
+        <p><a href="mailto:irtizababar90@gmail.com" aria-label="Email Me">irtizababar90@gmail.com</a></p>
       </div>
       <div class="contact-info-container">
         <img src="/assets/icons/linkedin-txt.svg" alt="LinkedIn icon" class="icon contact-icon" height="40" width="40" style="object-fit: cover;" loading="lazy" />
-        <p><a target="_blank" href={SITE.linkedin}>LinkedIn</a></p>
+        <p><a target="_blank" href={SITE.linkedin} aria-label="LinkedIn Profile">LinkedIn</a></p>
       </div>
     </div>
   </section>
