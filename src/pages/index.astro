@@ -6,7 +6,8 @@ import { PROJECTS } from '../data/projects';
 import { SKILLS } from '../data/skills';
 import { SITE } from '../data/site';
 
-import codingImg from '../assets/images/coding.gif';
+import codingImg from '../assets/images/coding.webp';
+import codingGif from '../assets/images/coding.gif';
 import dotsBgImg from '../assets/images/dots-bg.jpg';
 
 const title = SITE.title;
@@ -16,7 +17,19 @@ const description = SITE.description;
 <Layout {title} {description}>
   <section id="profile">
     <div class="section__pic-container">
-      <Image src={codingImg} alt="Person Coding gif" loading={"eager"} fetchpriority={"high"} />
+      <!-- static placeholder (replaced with gif) -->
+      <Image 
+        src={codingImg}
+        alt="Coding image"
+        class="gif-replace"
+        width={500}
+        height={300}
+        loading="eager"
+        fetchpriority="high"
+        data-gif={codingGif.src}
+      />
+      
+      <!-- <Image src={codingImg} alt="Person Coding gif" loading={"eager"} fetchpriority={"high"} /> -->
     </div>
     <div class="section__text">
       <p class="section__text__p1">Hello, I'm</p>
@@ -209,3 +222,21 @@ const description = SITE.description;
     </div>
   </section>
 </Layout>
+
+<style>
+  .gif-replace {
+    transition: opacity 1s ease-in-out;
+  }
+</style>
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const img = document.querySelector(".gif-replace");
+    const gifSrc = img.dataset.gif;
+
+    const gif = new Image();
+    gif.src = gifSrc;
+    gif.onload = () => {
+      img.src = gifSrc;
+    };
+  });
+</script>
