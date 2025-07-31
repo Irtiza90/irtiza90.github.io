@@ -1,0 +1,36 @@
+---
+import { SITE } from '../../data/site';
+
+const {
+  title = `${SITE.author} - Portfolio | Full-Stack Developer`,
+  description = 'My portfolio site showcasing my projects and skills. Explore my work and get in touch for collaborations.',
+  keywords = SITE.keywords
+} = Astro.props;
+
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: title,
+  url: SITE.url,
+  description,
+  keywords,
+  inLanguage: "en",
+  isPartOf: {
+    "@type": "WebSite",
+    url: SITE.url,
+  },
+  author: {
+    "@type": "Person",
+    "name": SITE.author
+  },
+  publisher: {
+    "@type": "Person",
+    "name": SITE.author
+  }
+};
+
+---
+
+<script is:inline type="application/ld+json" set:html={
+  JSON.stringify(webPageSchema, null, 2)
+}></script>

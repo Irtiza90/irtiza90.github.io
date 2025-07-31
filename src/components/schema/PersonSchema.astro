@@ -1,0 +1,41 @@
+---
+import { SITE } from '../../data/site';
+import { SKILLS } from '../../data/skills';
+import { EDUCATION, WORK_EXPERIENCE, CERTIFICATIONS } from '../../data/experience';
+import { ABOUT } from '../../data/about';
+
+const {
+  description,
+  jobTitle,
+} = Astro.props;
+
+const _skills = Object.values(SKILLS)
+  .flat()
+  .map(skill => skill.name);
+
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: SITE.author,
+  url: SITE.url,
+  email: ABOUT.email,
+  jobTitle,
+  description,
+  sameAs: [ABOUT.linkedin, ABOUT.github].filter(Boolean),
+  knowsAbout: _skills,
+  alumniOf: {
+    "@type": "EducationalOrganization",
+    "name": EDUCATION[0].institute
+  },
+  worksFor: {
+    "@type": "Organization",
+    "name": WORK_EXPERIENCE[0].company,
+  }
+};
+
+---
+
+<script is:inline type="application/ld+json" set:html={
+  JSON.stringify(personSchema, null, 2)
+}></script>

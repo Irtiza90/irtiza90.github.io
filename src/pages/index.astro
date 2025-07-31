@@ -5,6 +5,7 @@ import Layout from '../layouts/Layout.astro';
 import { PROJECTS } from '../data/projects';
 import { SKILLS } from '../data/skills';
 import { SITE } from '../data/site';
+import { ABOUT } from '../data/about';
 
 import codingImg from '../assets/images/coding.webp';
 import codingGif from '../assets/images/coding.gif';
@@ -45,10 +46,10 @@ const description = SITE.description;
         </a>
       </div>
       <div id="socials-container">
-        <a class="no-style" target="_blank" href={SITE.linkedin} aria-label="LinkedIn Profile">
+        <a class="no-style" target="_blank" href={ABOUT.linkedin} aria-label="LinkedIn Profile">
           <img src="/assets/icons/linkedin.svg" alt="LinkedIn profile" class="icon" />
         </a>
-        <a class="no-style" target="_blank" href={SITE.github} aria-label="Github Profile">
+        <a class="no-style" target="_blank" href={ABOUT.github} aria-label="Github Profile">
           <img src="/assets/icons/github.svg" alt="Github profile" class="icon" />
         </a>
       </div>
@@ -217,7 +218,7 @@ const description = SITE.description;
       </div>
       <div class="contact-info-container">
         <img src="/assets/icons/linkedin-txt.svg" alt="LinkedIn icon" class="icon contact-icon" height="40" width="40" style="object-fit: cover;" loading="lazy" />
-        <p><a target="_blank" href={SITE.linkedin} aria-label="LinkedIn Profile">LinkedIn</a></p>
+        <p><a target="_blank" href={ABOUT.linkedin} aria-label="LinkedIn Profile">LinkedIn</a></p>
       </div>
     </div>
   </section>

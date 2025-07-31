@@ -1,0 +1,31 @@
+---
+import { SITE } from '../../data/site';
+import { PROJECTS } from '../../data/projects';
+
+function stripHtml(html: string): string {
+  return html.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+}
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  itemListElement: PROJECTS.map((project, index) => ({
+    "@type": "CreativeWork",
+    "position": index + 1,
+    "name": project.title,
+    "description": stripHtml(project.description).slice(0, 250),
+    "url": project.liveUrl || project.githubUrl || SITE.url,
+    "image": `${SITE.url}${project.image}`,
+    "creator": {
+      "@type": "Person",
+      "name": SITE.author,
+    },
+    "keywords": project.tags || []
+  }))
+};
+---
+
+<script is:inline type="application/ld+json" set:html={
+  JSON.stringify(schema, null, 2)
+  }>
+</script>

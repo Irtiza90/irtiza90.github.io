@@ -1,9 +1,14 @@
 ---
 import { SITE } from '../data/site';
 
+import PersonSchema from './schema/PersonSchema.astro';
+import ProjectsSchema from './schema/ProjectsSchema.astro';
+import WebPageSchema from './schema/WebPageSchema.astro';
+
 const { 
   title = `${SITE.author} - Portfolio | Full-Stack Developer`, 
-  description = 'My portfolio site showcasing my projects and skills. Explore my work and get in touch for collaborations.' 
+  description = 'My portfolio site showcasing my projects and skills. Explore my work and get in touch for collaborations.',
+  page = 'home',
 } = Astro.props;
 
 const meta = {
@@ -16,7 +21,6 @@ const meta = {
 };
 ---
 
-<!-- Primary Meta Tags -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{title}</title>
@@ -45,24 +49,9 @@ const meta = {
 <meta property="twitter:image" content={`${meta.url}${meta.image}`}>
 
 <!-- Schema.org -->
-<script
-  type="application/ld+json"
-  is:inline
-  set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "Person",
-    name: SITE.author,
-    url: SITE.url,
-    sameAs: [SITE.linkedin, SITE.github].filter(Boolean),
-    jobTitle: meta.jobTitle,
-    worksFor: {
-      "@type": "Organization",
-      name: "Freelance"
-    },
-    description,
-    image: `${meta.url}${meta.image}`
-  }, null, 2)}
-></script>
+<PersonSchema {description} />
+<WebPageSchema {title} {description} keywords={SITE.keywords} />
+<ProjectsSchema />
 
 <!-- Google Analytics -->
 <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-XSSR49FYJ1"></script>
