@@ -6,7 +6,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "optimize:svgs": "svgo public/assets/icons/*.svg"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.11",
@@ -14,5 +15,8 @@
     "gsap": "^3.13.0",
     "sass": "^1.89.2",
     "tailwindcss": "^4.1.11"
+  },
+  "devDependencies": {
+    "svgo": "^4.0.0"
   }
 }
