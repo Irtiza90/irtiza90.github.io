@@ -1,0 +1,211 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+
+import { PROJECTS } from '../data/projects';
+import { SKILLS } from '../data/skills';
+import { SITE } from '../data/site';
+
+import codingImg from '../assets/images/coding.gif';
+import dotsBgImg from '../assets/images/dots-bg.jpg';
+
+const title = SITE.title;
+const description = SITE.description;
+---
+
+<Layout {title} {description}>
+  <section id="profile">
+    <div class="section__pic-container">
+      <Image src={codingImg} alt="Person Coding gif" loading={"eager"} fetchpriority={"high"} />
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">Irtiza</h1>
+      <p class="section__text__p2">FullStack Developer</p>
+      <div class="btn-container">
+        <a href={SITE.cv} target="_blank" class="no-style">
+          <button class="btn btn-color-2" type="button">Download CV</button>
+        </a>
+        <a class="no-style" href="#contact">
+          <button class="btn btn-color-1" type="button">Contact Info</button>
+        </a>
+      </div>
+      <div id="socials-container">
+        <a class="no-style" target="_blank" href={SITE.linkedin}>
+          <img src="/assets/icons/linkedin.svg" alt="LinkedIn profile" class="icon" />
+        </a>
+        <a class="no-style" target="_blank" href={SITE.github}>
+          <img src="/assets/icons/github.svg" alt="Github profile" class="icon" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <p class="section__text__p1">Get To Know More</p>
+    <h1 class="title">About Me</h1>
+    <div class="section-container">
+      <div class="section__pic-container">
+        <img src="../assets/images/about-pic.jpg" alt="Profile picture" class="about-pic" />
+      </div>
+      <div class="about-details-container">
+        <div class="about-containers d-flex">
+          <div class="details-container">
+            <img src="/assets/img/experience.png" alt="Experience icon" class="icon" />
+            <h3>Experience</h3>
+            <p>2+ years <br />FullStack Development</p>
+          </div>
+          <div class="details-container">
+            <img src="/assets/img/education.png" alt="Education icon" class="icon" />
+            <h3>Education</h3>
+            <p>Diploma in Software Engineering <small>(PRESENT)</small></p>
+          </div>
+        </div>
+        <div class="text-container">
+          <p>
+            I'm a Full-Stack developer based in Pakistan with a passion for web development & designing. I have a solid foundation in multiple languages and enjoy working on the backend with Laravel. When it comes to web design and frontend development, I enjoy creating modern, and user-friendly sites. I focus on creating sites that not only looks good, but also performs efficiently and meets the user's needs.
+          </p>
+        </div>
+        <button onclick="window.location.href = '/about'" class="more-about-btn mt-4 btn btn-color-2">More</button>
+      </div>
+    </div>
+
+    <a href="#experience" class="no-style">
+      <img src="/assets/img/arrow.png" alt="Arrow icon" class="icon arrow" />
+    </a>
+  </section>
+
+  <section id="experience" style="position: relative;">
+    <Image class="exp-bg-image" src={dotsBgImg} loading={"lazy"} decoding={"async"} style="position: absolute;width: 100%;height: 114%;top: 0;left: 0;border-radius: 2rem;filter: saturate(0.1);z-index: -1;opacity: 0.6;" aria-hidden="true" alt="dots background" />
+
+    <div class="container">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Skills</h1>
+      <div id="skills-container" class="experience-details-container">
+        <div class="about-containers">
+          <div class="container">
+            <h2 class="experience-sub-title mt-4">Frontend</h2>
+            <div class="skills-container d-flex flex-wrap">
+              {SKILLS.frontend.map(skill => (
+                <div class="skill py-4">
+                  <div>
+                    <p><img class="icon" src={skill.icon} alt={skill.name} /></p>
+                    <h3>{skill.name}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <h2 class="experience-sub-title mt-4">Backend</h2>
+            <div class="skills-container d-flex flex-wrap">
+              {SKILLS.backend.map(skill => (
+                <div class="skill py-4">
+                  <div>
+                    <p><img class="icon" src={skill.icon} alt={skill.name} /></p>
+                    <h3>{skill.name}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <h2 class="experience-sub-title mt-4">Extras</h2>
+            <div class="skills-container d-flex flex-wrap">
+              {SKILLS.extras.map(skill => (
+                <div class="skill py-4">
+                  <div>
+                    <p><img class="icon" src={skill.icon} alt={skill.name} /></p>
+                    <h3>{skill.name}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <a href="#projects" class="no-style">
+          <img src="/assets/img/arrow.png" alt="Arrow icon" class="icon arrow" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="smooth-wrapper no-mg">
+    <progress id="projects-bg-progress" class="hidden" value="0" max="40"></progress>
+
+    <div id="projects-container" class="container experience-details-container smooth-content">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+
+      <div class="about-containers">
+        {PROJECTS.map(project => (
+          <div class="project-wrapper">
+            <div class="project details-container color-container">
+              <div class="article-container row">
+                <div class="project-img-container col-12 col-md-6 col-lg-4">
+                  <img src={project.image} alt={project.title} class="project-img img-fluid" />
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-8">
+                  <h2 class="experience-sub-title project-title">{project.title}</h2>
+
+                  <div class="d-none d-lg-block">
+                    <div class="content" set:html={project.description}></div>
+
+                    <div class="btn-container mt-4">
+                      {project.liveUrl && (
+                        <a class="no-style" href={project.liveUrl} target="_blank" rel="noopener nofollow">
+                          <button class="btn btn-color-2 project-btn" type="button">
+                            {project.viewBtnText}
+                          </button>
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 d-lg-none mt-2 mt-lg-0">
+                  <div class="content">
+                    {project.description}
+                  </div>
+
+                  <div class="btn-container mt-4">
+                    {project.liveUrl && (
+                      <a class="no-style" href={project.liveUrl} target="_blank" rel="noopener nofollow">
+                        <button class="btn btn-color-2 project-btn" type="button">
+                          {project.viewBtnText}
+                        </button>
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <a
+        href="https://github.com/Irtiza90?tab=repositories"
+        target="_blank"
+        rel="noopener nofollow"
+        class="btn btn-color-1 mx-auto view-more-proj-btn"
+        style="margin-bottom: 8rem;position: absolute;bottom: 0;left: 50%;transform: translateX(-50%);"
+      >
+        View More
+      </a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <p class="section__text__p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <img src="/assets/img/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+        <p><a href="mailto:irtizababar@outlook.com">irtizababar@outlook.com</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="/assets/img/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+        <p><a target="_blank" href={SITE.linkedin}>LinkedIn</a></p>
+      </div>
+    </div>
+  </section>
+</Layout>

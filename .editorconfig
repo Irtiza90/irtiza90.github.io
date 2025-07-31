@@ -3,5 +3,5 @@ root = true
 indent_style = space
 end_of_line = lf
 
-[*.{html,css,scss,js}]
+[*.{html,css,scss,js,astro}]
 indent_size = 2

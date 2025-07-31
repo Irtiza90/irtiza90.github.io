@@ -1,0 +1,24 @@
+---
+import { NAV_LINKS, SOCIAL_LINKS, SITE } from '../data/site';
+
+const currentYear = new Date().getFullYear();
+const footerLinks = NAV_LINKS.filter(link => link.name !== 'Home');
+---
+
+<footer>
+  <nav>
+    <div class="nav-links-container">
+      <ul class="nav-links">
+        {footerLinks.map(link => (
+          <li>
+            <a href={link.path}>
+              {link.name}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </nav>
+  
+  <p>Copyright &copy; {currentYear} {SITE.author}. All Rights Reserved.</p>
+</footer>
