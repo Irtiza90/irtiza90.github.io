@@ -11,7 +11,7 @@ const footerLinks = NAV_LINKS.filter(link => link.name !== 'Home');
       <ul class="nav-links">
         {footerLinks.map(link => (
           <li>
-            <a href={link.path}>
+            <a href={link.path} aria-label={link.name}>
               {link.name}
             </a>
           </li>

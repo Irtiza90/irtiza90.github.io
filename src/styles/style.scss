@@ -398,9 +398,14 @@ article {
 .project-btn {
   color: black;
   border-color: rgb(163, 163, 163);
+  transition: 0.7s ease;
+  font-size: 0.9rem;
+  padding: 1rem 0.1rem;
 
   &:hover {
-    border: 0 !important;
+    border-color: transparent !important;
+    color: white !important;
+    box-shadow: 5px 0px 7px #8080807d;
   }
 }
 
