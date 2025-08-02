@@ -34,10 +34,14 @@ const description = SITE.description;
       <!-- <Image src={codingImg} alt="Person Coding gif" loading={"eager"} fetchpriority={"high"} /> -->
     </div>
     <div class="section__text">
-      <p class="section__text__p1">Hello, I'm</p>
-      <h1 class="title">Irtiza</h1>
-      <p class="section__text__p2">FullStack Developer</p>
-      <div class="btn-container">
+      <div id="intro">
+        <h1 class="intro__heading">
+          <span class="intro__start">Hello, I'm</span>
+          <span class="intro__name">Irtiza</span>
+        </h1>
+        <h2 class="intro__subheading">FullStack Developer</h2>
+      </div>
+      <div class="btn-container justify-content-center mb-4">
         <a href={SITE.cv} target="_blank" class="no-style" aria-label="Download CV">
           <button class="btn btn-color-2" type="button">Download CV</button>
         </a>
@@ -149,7 +153,7 @@ const description = SITE.description;
 
     <div id="projects-container" class="container experience-details-container smooth-content">
       <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
+      <h2 class="title">Projects</h2>
 
       <div class="about-containers">
         {PROJECTS.map(project => (
@@ -160,7 +164,7 @@ const description = SITE.description;
                   <img src={project.image} alt={project.title} class="project-img img-fluid" decoding="async" loading="lazy" />
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-8">
-                  <h2 class="experience-sub-title project-title">{project.title}</h2>
+                  <h3 class="experience-sub-title project-title">{project.title}</h3>
 
                   <div class="d-none d-lg-block">
                     <div class="content" set:html={project.description}></div>
@@ -210,14 +214,14 @@ const description = SITE.description;
 
   <section id="contact">
     <p class="section__text__p1">Get in Touch</p>
-    <h1 class="title">Contact Me</h1>
+    <h2 class="title">Contact Me</h2>
     <div class="contact-info-upper-container">
       <div class="contact-info-container">
         <img src="/assets/icons/email.svg" alt="Email icon" class="icon contact-icon email-icon" height="40" width="40" loading="lazy" />
-        <p><a href="mailto:irtizababar90@gmail.com" aria-label="Email Me">irtizababar90@gmail.com</a></p>
+        <p><a href={"mailto:" + ABOUT.email} aria-label="Email Me">{ABOUT.email}</a></p>
       </div>
       <div class="contact-info-container">
-        <img src="/assets/icons/linkedin-txt.svg" alt="LinkedIn icon" class="icon contact-icon" height="40" width="40" style="object-fit: cover;" loading="lazy" />
+        <img src="/assets/icons/linkedin-txt.svg" alt="LinkedIn icon" class="icon contact-icon object-fit-cover" height="40" width="40" loading="lazy" />
         <p><a target="_blank" href={ABOUT.linkedin} aria-label="LinkedIn Profile">LinkedIn</a></p>
       </div>
     </div>
@@ -241,3 +245,4 @@ const description = SITE.description;
     };
   });
 </script>
+<script src="../scripts/index.js"></script>
