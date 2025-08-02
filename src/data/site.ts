@@ -7,6 +7,7 @@ export const SITE = {
   url: 'https://irtiza90.github.io',
   author: 'Irtiza Babar',
   githubRepo: 'https://github.com/irtiza90/irtiza90.github.io',
+  formSpreeURL: 'https://formspree.io/f/xeozlark',
   cv: '/CV-Irtiza Babar.pdf',
   image: aboutImg.src,
   defaultDescription: 'Full-Stack Developer with expertise in modern web technologies',
